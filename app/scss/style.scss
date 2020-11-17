@@ -66,4 +66,131 @@
     }
 }
 
+.footer {
+    background-color: $bg-grey-color;
+}
+
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #ececec;
+    padding: 70px 0 40px;
+
+    &__contact {
+        margin-right: 50px;
+        width: 250px;
+    }
+
+    &__subscribe {
+        max-width: 470px;
+
+        &-text {
+            margin-bottom: 25px;
+        }
+    }
+
+    &__logo {
+        display: block;
+        margin-bottom: 35px;
+    }
+
+    &__title {
+        margin-bottom: 40px;
+        font-size: 22px;
+        line-height: 1;
+        color: $title-color;
+
+        @extend %Roboto-Medium;
+    }
+
+    &__social-list {
+        display: flex;
+        align-items: center;
+        margin-top: 30px;
+    }
+
+    &__social-link {
+        transition: all 0.5s;
+
+        path {
+            fill: $default-color;
+        }
+
+        :hover {
+            path {
+                fill: $accent-color;
+            }
+        }
+    }
+
+    &__link {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    &__subscribe-email {
+        border: none;
+        padding: 15px;
+        width: 100%;
+        max-width: 320px;
+        box-shadow: 0 7px 20px 0 rgba(192, 192, 192, 0.3);
+        background-color: #fff;
+
+        ::placeholder {
+            color: $default-color;
+        }
+    }
+
+    &__subscribe-btn {
+        border: none;
+        padding: 15px 26px;
+        box-shadow: 0 7px 20px 0 rgba(255, 17, 48, 0.3);
+        text-transform: uppercase;
+        color: #fff;
+        background-color: $accent-color;
+        cursor: pointer;
+    }
+
+    &__list-item {
+        :hover {
+            color: $accent-color;
+            transition: all 0.5s;
+        }
+    }
+
+    &__adress,
+    &__email,
+    &__phone {
+        display: block;
+        margin-bottom: 10px;
+        transition: all 0.5s;
+
+        &:hover {
+            color: $accent-color;
+        }
+    }
+
+    &__social-item + &__social-item {
+        margin-left: 14px;
+    }
+}
+
+.footer-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 75px;
+    font-size: 12px;
+
+    &__accept {
+        display: flex;
+        align-items: center;
+
+        &-img {
+            display: inline-block;
+            margin-left: 25px;
+        }
+    }
+}
+
 @import "media";

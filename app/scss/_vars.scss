@@ -1,6 +1,7 @@
 $accent-color: #fe3e57;
 $default-color: #8d8d8d;
 $title-color: #29292d;
+$bg-grey-color: #f6f6f6;
 
 %Quicksand-Regular {
     font-family: "Quicksand-Regular", sans-serif;
@@ -15,6 +16,11 @@ $title-color: #29292d;
 %Roboto-Regular {
     font-family: "Roboto-Regular", sans-serif;
     font-weight: 400;
+}
+
+%Roboto-Medium {
+    font-family: "Roboto-Medium", sans-serif;
+    font-weight: 500;
 }
 
 %Roboto-Bold {
