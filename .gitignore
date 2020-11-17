@@ -1,0 +1,16 @@
+.DS_Store
+.idea/
+.idea/*
+.vscode
+*.sublime*
+npm-degug.*
+
+# папка выхода
+dist/
+app/css/*
+
+# папка плагинов
+node_modules/
+
+# локальные настройки
+package-lock.json
