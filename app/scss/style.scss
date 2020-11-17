@@ -2,4 +2,68 @@
 @import "fonts";
 @import "reset";
 @import "global";
+
+.header {
+    padding: 40px 0;
+
+    &__inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+.menu {
+    &__list {
+        display: flex;
+        text-transform: uppercase;
+    }
+
+    &__list-link {
+        padding-bottom: 3px;
+        color: $title-color;
+        transition: all 0.5s;
+
+        &:hover {
+            border-bottom: 1px solid $accent-color;
+            color: $accent-color;
+        }
+    }
+
+    &__list-link--active {
+        border-bottom: 1px solid $accent-color;
+        color: $accent-color;
+    }
+
+    &__list-item + &__list-item {
+        padding-left: 40px;
+    }
+}
+
+.user-nav {
+    display: flex;
+
+    &__link {
+        position: relative;
+    }
+
+    &__link-number {
+        position: absolute;
+        right: -12px;
+        top: -9px;
+        border-radius: 50%;
+        width: 20px;
+        height: 20px;
+        font-size: 12px;
+        line-height: 20px;
+        text-align: center;
+        color: #fff;
+        background-color: $accent-color;
+    }
+
+    &__link + &__link {
+        padding-left: 25px;
+    }
+}
+
 @import "media";
