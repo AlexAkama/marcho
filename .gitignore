@@ -8,6 +8,7 @@ npm-degug.*
 # папка выхода
 dist/
 app/css/*
+maket/
 
 # папка плагинов
 node_modules/
