@@ -591,7 +591,7 @@
 		"function-parentheses-newline-inside": "always-multi-line",
 		"function-parentheses-space-inside": "never-single-line",
 		"function-url-no-scheme-relative": true,
-		"function-url-quotes": "always",
+		"function-url-quotes": "never",
 		"function-url-scheme-blacklist": null,
 		"function-url-scheme-whitelist": null,
 		"function-whitelist": null,
@@ -692,7 +692,7 @@
 		"selector-type-no-unknown": true,
 		"shorthand-property-no-redundant-values": true,
 		"string-no-newline": true,
-		"string-quotes": "double",
+		"string-quotes": "single",
 		"time-min-milliseconds": 10,
 		"unit-blacklist": [
 			"ch",

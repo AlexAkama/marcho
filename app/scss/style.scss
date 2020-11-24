@@ -1,8 +1,8 @@
-@import "vars";
-@import "fonts";
-@import "reset";
-@import "libs";
-@import "global";
+@import 'vars';
+@import 'fonts';
+@import 'reset';
+@import 'libs';
+@import 'global';
 
 .header {
     padding: 40px 0;
@@ -76,7 +76,7 @@
 // ------------------------------------
 
 .top-slider {
-    background-image: url(../images/top-slider-bg.png);
+    background-image: url('../images/top-slider-bg.png');
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -138,7 +138,7 @@
                 width: 28px;
 
                 &::before {
-                    content: "";
+                    content: '';
                     position: absolute;
                     left: 50%;
                     top: 50%;
@@ -166,6 +166,154 @@
 }
 
 // ------------------------------------
+
+.caegories-n-info {
+    padding: 120px 0;
+    background-image: url('../images/decor/categories-left-bg.png'), url('../images/decor/categories-right-bg.png');
+    background-position: center left, center right;
+    background-repeat: no-repeat, no-repeat;
+}
+
+.info {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 110px;
+
+    &::after,
+    &::before {
+        content: '';
+        position: absolute;
+    }
+
+    &::before {
+        left: 0;
+        top: 0;
+        z-index: -1;
+        width: 120px;
+        height: 121px;
+        background-image: url(../images/decor/info-before.svg);
+        transform: translate(-35%, -35%);
+    }
+
+    &::after {
+        right: 0;
+        bottom: 0;
+        z-index: -1;
+        width: 65px;
+        height: 52px;
+        background-image: url(../images/decor/info-after.svg);
+        transform: translate(35%, 35%);
+    }
+
+    &__item {
+        padding: 60px 30px;
+        max-width: 370px;
+        box-shadow: 20px 0 60px 0 rgba(202, 202, 202, 0.35);
+        background-color: #fff;
+    }
+
+    &__title {
+        margin: 30px 0 10px;
+        font-size: 22px;
+        color: $title-color;
+
+        @extend %R-400;
+    }
+}
+
+.categories {
+    &__items {
+        display: grid;
+        grid-gap: 30px;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        min-height: 640px;
+    }
+
+    &__item {
+        padding: 40px;
+        background-position: center crnter;
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        &:nth-child(1) {
+            grid-row: span 2;
+
+            .categories__item-subtitle {
+                color: #5800e4;
+            }
+
+            .categories__item-link:hover {
+                border-bottom: 1px solid #5800e4;
+                color: #5800e4;
+            }
+        }
+
+        &:nth-child(2) {
+            grid-column: span 2;
+            padding-top: 120px;
+
+            .categories__item-subtitle {
+                color: $accent-color;
+            }
+
+            .categories__item-link:hover {
+                display: inline-block;
+                border-bottom: 1px solid $accent-color;
+                color: $accent-color;
+            }
+        }
+
+        &:nth-child(3) {
+            .categories__item-subtitle {
+                color: #ffb534;
+            }
+
+            .categories__item-link:hover {
+                border-bottom: 1px solid #ffb534;
+                color: #ffb534;
+            }
+        }
+
+        &:nth-child(4) {
+            .categories__item-subtitle {
+                color: #34c3ff;
+            }
+
+            .categories__item-link:hover {
+                border-bottom: 1px solid #34c3ff;
+                color: #34c3ff;
+            }
+        }
+    }
+
+    &__item-title {
+        margin-bottom: 10px;
+        font-size: 22px;
+        color: $title-color;
+
+        @extend %R-500;
+    }
+
+    &__item-subtitle {
+        margin-bottom: 5px;
+        color: $title-color;
+
+        @extend %Q-500;
+    }
+
+    &__item-link {
+        border-bottom: 1px solid transparent;
+        padding-bottom: 5px;
+        text-transform: uppercase;
+        color: $title-color;
+        transition: all 0.3s;
+        cursor: pointer;
+
+        @extend %R-400;
+    }
+}
 
 .footer {
     background-color: $bg-grey-color;
@@ -290,4 +438,4 @@
     }
 }
 
-@import "media";
+@import 'media';

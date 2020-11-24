@@ -26,3 +26,20 @@ html,
 body {
     height: 100%;
 }
+
+.title {
+    margin-bottom: 10px;
+    font-size: 48px;
+    line-height: 65px;
+    text-align: center;
+    text-transform: uppercase;
+    color: $title-color;
+
+    @extend %R-700;
+}
+
+.text {
+    margin: 0 auto 50px;
+    max-width: 570px;
+    text-align: center;
+}
