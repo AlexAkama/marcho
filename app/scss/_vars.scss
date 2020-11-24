@@ -3,27 +3,47 @@ $default-color: #8d8d8d;
 $title-color: #29292d;
 $bg-grey-color: #f6f6f6;
 
-%Quicksand-Regular {
+%btn {
+    padding: 12px 26px;
+    box-shadow: 0 10px 25px 0 rgba(254, 62, 87, 0.3);
+    font-size: 16px;
+    line-height: 26px;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: $accent-color;
+    cursor: pointer;
+
+    @extend %R-400;
+}
+
+%btn-clear {
+    border: none;
+    padding: 0;
+    font-size: 0;
+    background-color: transparent;
+}
+
+%Q-400 {
     font-family: "Quicksand-Regular", sans-serif;
     font-weight: 400;
 }
 
-%Quicksand-Medium {
+%Q-500 {
     font-family: "Quicksand-Medium", sans-serif;
     font-weight: 500;
 }
 
-%Roboto-Regular {
+%R-400 {
     font-family: "Roboto-Regular", sans-serif;
     font-weight: 400;
 }
 
-%Roboto-Medium {
+%R-500 {
     font-family: "Roboto-Medium", sans-serif;
     font-weight: 500;
 }
 
-%Roboto-Bold {
+%R-700 {
     font-family: "Roboto-Bold", sans-serif;
     font-weight: 700;
 }

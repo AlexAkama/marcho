@@ -1,6 +1,7 @@
 @import "vars";
 @import "fonts";
 @import "reset";
+@import "libs";
 @import "global";
 
 .header {
@@ -28,17 +29,17 @@
             border-bottom: 1px solid $accent-color;
             color: $accent-color;
 
-            @extend %Roboto-Bold;
+            @extend %R-700;
         }
 
-        @extend %Roboto-Regular;
+        @extend %R-400;
     }
 
     &__list-link--active {
         border-bottom: 1px solid $accent-color;
         color: $accent-color;
 
-        @extend %Roboto-Bold;
+        @extend %R-700;
     }
 
     &__list-item + &__list-item {
@@ -71,6 +72,100 @@
         padding-left: 25px;
     }
 }
+
+// ------------------------------------
+
+.top-slider {
+    background-image: url(../images/top-slider-bg.png);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: $bg-grey-color;
+
+    &__container {
+        position: relative;
+        max-width: 1560px;
+    }
+
+    &__item-inner {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+    }
+
+    &__text-content {
+        margin-left: 175px;
+        max-width: 570px;
+    }
+
+    &__title {
+        margin: 200px 0 35px;
+        max-width: 670px;
+        font-size: 58px;
+        line-height: 68px;
+        color: $title-color;
+
+        @extend %R-700;
+    }
+
+    &__text {
+        margin-bottom: 55px;
+        max-width: 470px;
+    }
+
+    &__link {
+        display: inline-block;
+        margin-bottom: 200px;
+
+        @extend %btn;
+    }
+
+    .slick-dots {
+        position: absolute;
+        left: 50%;
+        bottom: 70px;
+        display: flex;
+        justify-content: center;
+        transform: translateX(-50%);
+
+        li {
+            margin: 0 5px;
+
+            button {
+                position: relative;
+                border: 1px solid transparent;
+                border-radius: 50%;
+                width: 28px;
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    border-radius: 50%;
+                    width: 6px;
+                    height: 6px;
+                    background-color: $default-color;
+                    transform: translate(-50%, -50%);
+                }
+
+                @extend %btn-clear;
+            }
+
+            &.slick-active {
+                button {
+                    border-color: $accent-color;
+
+                    &::before {
+                        background-color: $accent-color;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// ------------------------------------
 
 .footer {
     background-color: $bg-grey-color;
@@ -106,7 +201,7 @@
         line-height: 1;
         color: $title-color;
 
-        @extend %Roboto-Medium;
+        @extend %R-500;
     }
 
     &__social-list {
@@ -136,7 +231,7 @@
 
     &__subscribe-email {
         border: none;
-        padding: 15px;
+        padding: 12px;
         width: 100%;
         max-width: 320px;
         box-shadow: 0 7px 20px 0 rgba(192, 192, 192, 0.3);
@@ -149,12 +244,8 @@
 
     &__subscribe-btn {
         border: none;
-        padding: 15px 26px;
-        box-shadow: 0 7px 20px 0 rgba(255, 17, 48, 0.3);
-        text-transform: uppercase;
-        color: #fff;
-        background-color: $accent-color;
-        cursor: pointer;
+
+        @extend %btn;
     }
 
     &__list-item {
