@@ -24,26 +24,34 @@ $bg-grey-color: #f6f6f6;
 }
 
 %Q-400 {
-    font-family: "Quicksand-Regular", sans-serif;
+    font-family: 'Quicksand-Regular', sans-serif;
     font-weight: 400;
 }
 
 %Q-500 {
-    font-family: "Quicksand-Medium", sans-serif;
+    font-family: 'Quicksand-Medium', sans-serif;
     font-weight: 500;
 }
 
 %R-400 {
-    font-family: "Roboto-Regular", sans-serif;
+    font-family: 'Roboto-Regular', sans-serif;
     font-weight: 400;
 }
 
 %R-500 {
-    font-family: "Roboto-Medium", sans-serif;
+    font-family: 'Roboto-Medium', sans-serif;
     font-weight: 500;
 }
 
 %R-700 {
-    font-family: "Roboto-Bold", sans-serif;
+    font-family: 'Roboto-Bold', sans-serif;
     font-weight: 700;
+}
+
+@function max($numbers...) {
+    @return m#{a}x(#{$numbers});
+}
+
+@function min($numbers...) {
+    @return m#{i}n(#{$numbers});
 }

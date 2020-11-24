@@ -5,13 +5,14 @@
   "main": "index.js",
   "scripts": {
     "watch": "gulp",
-    "build" : "gulp build",
+    "build": "gulp build",
     "stylelint": "stylelint '**/*{.css,.scss}'",
     "stylelint:fix": "stylelint '**/*{.css,.scss}' --fix"
   },
   "author": "Alexey Maslov",
   "license": "ISC",
   "devDependencies": {
+    "@fancyapps/fancybox": "^3.5.7",
     "browser-sync": "^2.26.13",
     "del": "^6.0.0",
     "gulp": "^4.0.2",
