@@ -562,6 +562,95 @@
 
 // ------------------------------------
 
+.promo-top {
+    margin-bottom: 120px;
+    padding-top: 160px;
+    text-align: center;
+    background-image: url(../images/promo-bg.png);
+    background-position: left center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: $bg-grey-color;
+
+    // &__container {
+    //     display: flex;
+    //     justify-content: flex-end;
+    // }
+
+    &__inner {
+        margin-left: auto;
+        max-width: 570px;
+    }
+
+    &__subtitle {
+        font-size: 22px;
+        line-height: 26px;
+        text-transform: uppercase;
+        color: $accent-color;
+    }
+
+    &__title {
+        margin-bottom: 60px;
+    }
+
+    &__link {
+        display: inline-block;
+        margin-bottom: 120px;
+        border: 1px solid $accent-color;
+        box-shadow: none;
+        color: $title-color;
+        background-color: transparent;
+
+        @extend %btn;
+    }
+}
+
+.timer {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 60px;
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        border-radius: 50%;
+        width: 120px;
+        height: 120px;
+        background-color: #fff;
+    }
+
+    &__item-digit {
+        font-size: 48px;
+        line-height: 1;
+        text-align: center;
+        color: $title-color;
+
+        @extend %R-700;
+    }
+
+    &__item-text {
+        text-transform: capitalize;
+    }
+
+    &__item + &__item {
+        margin-left: 30px;
+    }
+}
+
+.sponsors {
+    margin-bottom: 120px;
+    border-top: 40px;
+
+    &__list {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+// ------------------------------------
+
 .footer {
     background-color: $bg-grey-color;
 }
