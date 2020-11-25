@@ -23,6 +23,7 @@
     "gulp-uglify": "^3.0.2",
     "jquery": "^3.5.1",
     "prettier": "^2.1.2",
+    "rateyo": "^2.3.2",
     "slick-carousel": "^1.8.1",
     "stylelint": "^13.7.2",
     "stylelint-config-airbnb": "0.0.0",
