@@ -23,6 +23,12 @@ $bg-grey-color: #f6f6f6;
     background-color: transparent;
 }
 
+%bg-center {
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
 %Q-400 {
     font-family: 'Quicksand-Regular', sans-serif;
     font-weight: 400;
