@@ -75,6 +75,33 @@
 
 // ------------------------------------
 
+.page-top {
+    &__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+        padding: 120px 0;
+        max-width: 1700px;
+        text-align: center;
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    &__title {
+        margin-bottom: 20px;
+        font-size: 48px;
+        line-height: 1;
+        color: $title-color;
+
+        @extend %R-400;
+    }
+}
+
+// ------------------------------------
+
 .top-slider {
     background-image: url(../images/top-slider-bg.png);
     background-color: $bg-grey-color;

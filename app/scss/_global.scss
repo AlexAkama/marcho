@@ -43,3 +43,53 @@ body {
     max-width: 570px;
     text-align: center;
 }
+
+.breadcrumbs {
+    position: relative;
+    padding-left: 20px;
+    text-transform: capitalize;
+
+    &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 3px;
+        width: 16px;
+        height: 16px;
+        background-image: url(../images/icons/home.svg);
+    }
+
+    &__list {
+        display: flex;
+    }
+
+    &__list-item {
+        position: relative;
+        padding-right: 40px;
+
+        &::after {
+            content: '';
+            position: absolute;
+            right: 15px;
+            top: 9px;
+            width: 9px;
+            height: 10px;
+            background-image: url(../images/icons/angle-right.svg);
+        }
+
+        &:last-child {
+            padding-right: 0;
+            color: $accent-color;
+
+            &::after {
+                display: none;
+            }
+        }
+    }
+
+    &__list-link {
+        color: inherit;
+    }
+
+    @extend %Q-500;
+}
