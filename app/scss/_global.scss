@@ -93,3 +93,7 @@ body {
 
     @extend %Q-500;
 }
+
+.header--404-page {
+    background-color: $bg-grey-color;
+}

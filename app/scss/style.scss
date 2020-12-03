@@ -1023,4 +1023,49 @@
     }
 }
 
+// ------------------------------------
+
+.page-404 {
+    margin: 120px 0;
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__content {
+        max-width: 570px;
+    }
+
+    &__title {
+        margin: 150px 0 20px;
+        font-size: 48px;
+        line-height: 1.2;
+        color: #28384f;
+
+        @extend %R-700;
+    }
+
+    &__text {
+        margin-bottom: 60px;
+        max-width: 470px;
+    }
+
+    &__link {
+        padding: 13px 30px;
+        box-shadow: 0 5px 25px 0 rgba(254, 62, 87, 0.35);
+        text-transform: uppercase;
+        color: #fff;
+        background-color: $accent-color;
+
+        @extend %R-400;
+    }
+
+    &__img {
+        max-width: 570px;
+    }
+}
+
+// ------------------------------------
+
 @import 'media';
