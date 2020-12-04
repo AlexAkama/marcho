@@ -1067,5 +1067,266 @@
 }
 
 // ------------------------------------
+//
+// SHOP PAGE
+//
+// ------------------------------------
+
+.shop {
+    margin: 120px;
+
+    &__filters {
+        margin-right: 30px;
+        width: 370px;
+    }
+}
+
+.filter {
+    &__item {
+        margin-bottom: 40px;
+        border: 1px solid #cecece;
+        padding: 35px 30px 40px;
+    }
+
+    &__title {
+        margin-bottom: 25px;
+        font-size: 22px;
+        text-transform: uppercase;
+        color: $title-color;
+
+        @extend %R-400;
+    }
+}
+
+.search {
+    &__form {
+        display: flex;
+    }
+
+    &__input {
+        border: none;
+        padding: 0 15px;
+        width: 260px;
+        height: 50px;
+        background-color: $bg-grey-color;
+    }
+
+    &__submit-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: none;
+        width: 50px;
+        height: 50px;
+        background-color: $accent-color;
+        cursor: pointer;
+    }
+}
+
+.price-filter {
+    &__label {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__submit-btn {
+        border: none;
+        letter-spacing: 4px;
+        text-transform: uppercase;
+
+        @extend %btn;
+    }
+}
+
+.irs--flat {
+    margin: 40px 0 30px;
+    height: 30px;
+
+    .irs-line {
+        top: 12px;
+        border-radius: 0;
+        height: 6px;
+        background-color: #ececec;
+    }
+
+    .irs-handle {
+        top: 0;
+        width: 30px;
+        height: 30px;
+        box-shadow: 0 0 13px 0 rgba(90, 90, 90, 0.2);
+        background-color: #fff;
+
+        > i:first-child {
+            display: none;
+        }
+    }
+
+    .irs-bar {
+        top: 12px;
+        height: 6px;
+        background-color: $accent-color;
+    }
+
+    .irs-to,
+    .irs-from,
+    .irs-min,
+    .irs-max {
+        display: none;
+    }
+}
+
+.color-filter {
+    padding-bottom: 0;
+
+    &__label {
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 2px solid #ebebeb;
+        padding: 20px 0;
+
+        &:last-child {
+            border-bottom: none;
+        }
+    }
+
+    &__input {
+        &:checked + .color-filter__color-mark {
+            background-image: url(../images/icons/check.svg);
+            background-position: center center;
+            background-size: 80%;
+            background-repeat: no-repeat;
+        }
+
+        @extend %checkbox-hide;
+    }
+
+    &__color-mark {
+        position: absolute;
+        margin-top: 7px;
+        margin-left: -16px;
+        width: 16px;
+        height: 16px;
+    }
+
+    &__color-mark--blue {
+        background-color: #00aeef;
+    }
+
+    &__color-mark--red {
+        background-color: #f52574;
+    }
+
+    &__color-mark--green {
+        background-color: #24d4ac;
+    }
+
+    &__color-mark--orange {
+        background-color: #ff7e00;
+    }
+
+    &__color-mark--black {
+        background-color: #00aeef;
+    }
+
+    &__color-mark--purple {
+        background-color: #923899;
+    }
+}
+
+.size-filter {
+    padding-bottom: 25px;
+
+    &__label {
+        display: block;
+        margin: 10px 0;
+        padding-left: 35px;
+    }
+
+    &__input {
+        &:checked + .size-filter__check-mark {
+            border-color: $accent-color;
+            background-image: url(../images/icons/check-mark-accent.svg);
+
+            & + .size-filter__text {
+                color: $accent-color;
+            }
+        }
+
+        @extend %checkbox-hide;
+    }
+
+    &__check-mark {
+        position: absolute;
+        margin-top: 3px;
+        margin-left: -35px;
+        border: 2px solid $default-color;
+        border-radius: 50%;
+        width: 20px;
+        height: 20px;
+        background-image: url(../images/icons/check-mark-grey.svg);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+}
+
+.category-filter {
+    padding-bottom: 25px;
+
+    &__label {
+        display: block;
+        margin-bottom: 15px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__input {
+        &:checked + .category-filter__text {
+            color: #fff;
+            background-color: $accent-color;
+        }
+
+        @extend %checkbox-hide;
+    }
+
+    &__text {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 15px 20px;
+        background-color: $bg-grey-color;
+        cursor: pointer;
+    }
+}
+
+.tags-filter {
+    padding-bottom: 25px;
+
+    &__label {
+        display: inline-block;
+        margin: 0 5px 25px 0;
+        cursor: pointer;
+    }
+
+    &__input {
+        &:checked + .tags-filter__text {
+            border-color: $accent-color;
+            color: #fff;
+            background-color: $accent-color;
+        }
+
+        @extend %checkbox-hide;
+    }
+
+    &__text {
+        border: 1px solid $default-color;
+        padding: 10px 20px;
+    }
+}
+
+// ------------------------------------
 
 @import 'media';

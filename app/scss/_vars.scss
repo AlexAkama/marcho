@@ -54,6 +54,14 @@ $bg-grey-color: #f6f6f6;
     font-weight: 700;
 }
 
+%checkbox-hide {
+    position: absolute;
+    overflow: hidden;
+    width: 1px;
+    height: 1px;
+    clip: rect(0 0 0 0);
+}
+
 @function max($numbers...) {
     @return m#{a}x(#{$numbers});
 }

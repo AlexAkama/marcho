@@ -58,19 +58,216 @@
     <main class="main">
         <section class="page-top">
             <div class="page-top__container" style="background-image: url(images/top-bg.jpg);">
-                <h2 class="page-top__title">Title</h2>
+                <h2 class="page-top__title">Shop page</h2>
                 <div class="breadcrumbs">
                     <ul class="breadcrumbs__list">
                         <li class="breadcrumbs__list-item">
                             <a class="breadcrumbs__list-link" href="#">home</a>
                         </li>
                         <li class="breadcrumbs__list-item">
-                            <span class="breadcrumbs__list-link" href="#">Page Name</span>
+                            <span class="breadcrumbs__list-link" href="#">Shop page</span>
                         </li>
                     </ul>
                 </div>
             </div>
         </section>
+
+        <section class="shop">
+            <div class="container">
+                <div class="shop__inner">
+
+                    <div class="shop__filters search-filter">
+
+                        <div class="filter__search filter__item">
+                            <h3 class="filter__title">search</h3>
+                            <form class="search__form" action="#">
+                                <input class="search__input" type="search" name="search" placeholder="Search your keyword....">
+                                <button class="search__submit-btn" type="submit">
+                                    <img class="search__img" src="images/icons/search-white.svg" alt="search icon">
+                                </button>
+                            </form>
+                        </div>
+
+                        <div class="filter__item price-filter">
+                            <h3 class="filter__title">price filter</h3>
+                            <form class="price-filter__form" action="#">
+                                <input class="price-filter__input" type="text" name="price" data-min="0" data-max="999" data-from="200" data-to="800">
+                                <label class="price-filter__label">
+                                    <span class="price-filter__text">
+                                        Price:
+                                        $<span class="price-filter__from"></span> -
+                                        $<span class="price-filter__to"></span>
+                                    </span>
+                                    <button class="price-filter__submit-btn" type="submit">Filter</button>
+                                </label>
+                            </form>
+                        </div>
+
+                        <div class="filter__item color-filter">
+                            <h3 class="filter__title">color filter</h3>
+                            <form class="color-filter__form" action="#">
+                                <label class="color-filter__label">
+                                    <span class="color-filter__text">Blue (15)</span>
+                                    <div class="color-filter__box">
+                                        <input class="color-filter__input" type="checkbox">
+                                        <span class="color-filter__color-mark color-filter__color-mark--blue"></span>
+                                    </div>
+                                </label>
+                                <label class="color-filter__label">
+                                    <span class="color-filter__text">Red (09)</span>
+                                    <div class="color-filter__box">
+                                        <input class="color-filter__input" type="checkbox">
+                                        <span class="color-filter__color-mark color-filter__color-mark--red"></span>
+                                    </div>
+                                </label>
+                                <label class="color-filter__label">
+                                    <span class="color-filter__text">Green (28)</span>
+                                    <div class="color-filter__box">
+                                        <input class="color-filter__input" type="checkbox">
+                                        <span class="color-filter__color-mark color-filter__color-mark--green"></span>
+                                    </div>
+                                </label>
+                                <label class="color-filter__label">
+                                    <span class="color-filter__text">Orange (11)</span>
+                                    <div class="color-filter__box">
+                                        <input class="color-filter__input" type="checkbox">
+                                        <span class="color-filter__color-mark color-filter__color-mark--orange"></span>
+                                    </div>
+                                </label>
+                                <label class="color-filter__label">
+                                    <span class="color-filter__text">Black (05)</span>
+                                    <div class="color-filter__box">
+                                        <input class="color-filter__input" type="checkbox">
+                                        <span class="color-filter__color-mark color-filter__color-mark--black"></span>
+                                    </div>
+                                </label>
+                                <label class="color-filter__label">
+                                    <span class="color-filter__text">Purple (21)</span>
+                                    <div class="color-filter__box">
+                                        <input class="color-filter__input" type="checkbox">
+                                        <span class="color-filter__color-mark color-filter__color-mark--purple"></span>
+                                    </div>
+                                </label>
+                            </form>
+                        </div>
+
+                        <div class="filter__item size-filter">
+                            <h3 class="filter__title">size filter</h3>
+                            <form class="size-filter__form" action="#">
+                                <label class="size-filter__label">
+                                    <input class="size-filter__input" type="checkbox">
+                                    <span class="size-filter__check-mark"></span>
+                                    <span class="size-filter__text">X-small</span>
+                                </label>
+                                <label class="size-filter__label">
+                                    <input class="size-filter__input" type="checkbox">
+                                    <span class="size-filter__check-mark"></span>
+                                    <span class="size-filter__text">Small</span>
+                                </label>
+                                <label class="size-filter__label">
+                                    <input class="size-filter__input" type="checkbox">
+                                    <span class="size-filter__check-mark"></span>
+                                    <span class="size-filter__text">Medium</span>
+                                </label>
+                                <label class="size-filter__label">
+                                    <input class="size-filter__input" type="checkbox">
+                                    <span class="size-filter__check-mark"></span>
+                                    <span class="size-filter__text">Large</span>
+                                </label>
+                                <label class="size-filter__label">
+                                    <input class="size-filter__input" type="checkbox">
+                                    <span class="size-filter__check-mark"></span>
+                                    <span class="size-filter__text">XXL</span>
+                                </label>
+                            </form>
+                        </div>
+
+                        <div class="filter__item category-filter">
+                            <h3 class="filter__title">category</h3>
+                            <form class="category-filter__form" action="#">
+                                <label class="category-filter__label">
+                                    <input class="category-filter__input" type="checkbox">
+                                    <div class="category-filter__text">
+                                        <span class="category-filter__name">Woman</span>
+                                        <span class="category-filter__number">48</span>
+                                    </div>
+                                </label>
+                                <label class="category-filter__label">
+                                    <input class="category-filter__input" type="checkbox">
+                                    <div class="category-filter__text">
+                                        <span class="category-filter__name">Man</span>
+                                        <span class="category-filter__number">30</span>
+                                    </div>
+                                </label>
+                                <label class="category-filter__label">
+                                    <input class="category-filter__input" type="checkbox" checked>
+                                    <div class="category-filter__text">
+                                        <span class="category-filter__name">Sale Products</span>
+                                        <span class="category-filter__number">92</span>
+                                    </div>
+                                </label>
+                                <label class="category-filter__label">
+                                    <input class="category-filter__input" type="checkbox">
+                                    <div class="category-filter__text">
+                                        <span class="category-filter__name">Fashion</span>
+                                        <span class="category-filter__number">121</span>
+                                    </div>
+                                </label>
+                                <label class="category-filter__label">
+                                    <input class="category-filter__input" type="checkbox">
+                                    <div class="category-filter__text">
+                                        <span class="category-filter__name">Hot Dresses</span>
+                                        <span class="category-filter__number">52</span>
+                                    </div>
+                                </label>
+                                <label class="category-filter__label">
+                                    <input class="category-filter__input" type="checkbox">
+                                    <div class="category-filter__text">
+                                        <span class="category-filter__name">Accessories</span>
+                                        <span class="category-filter__number">88</span>
+                                    </div>
+                                </label>
+                            </form>
+                        </div>
+
+                        <div class="filter__item tags-filter">
+                            <h3 class="filter__title tags__title">Popular Tags</h3>
+                            <form class="tags-filter__form" action="#">
+                                <label class="tags-filter__label">
+                                    <input class="tags-filter__input" type="checkbox">
+                                    <span class="tags-filter__text">Sweetshirt</span>
+                                </label>
+                                <label class="tags-filter__label">
+                                    <input class="tags-filter__input" type="checkbox">
+                                    <span class="tags-filter__text">Man Accessories</span>
+                                </label>
+                                <label class="tags-filter__label">
+                                    <input class="tags-filter__input" type="checkbox">
+                                    <span class="tags-filter__text">Fashion</span>
+                                </label>
+                                <label class="tags-filter__label">
+                                    <input class="tags-filter__input" type="checkbox">
+                                    <span class="tags-filter__text">Polo</span>
+                                </label>
+                                <label class="tags-filter__label">
+                                    <input class="tags-filter__input" type="checkbox">
+                                    <span class="tags-filter__text">T-Shirt</span>
+                                </label>
+                                <label class="tags-filter__label">
+                                    <input class="tags-filter__input" type="checkbox">
+                                    <span class="tags-filter__text">Jewellery</span>
+                                </label>
+                            </form>
+                        </div>
+
+                    </div>
+
+                    <div class="shop__content"></div>
+
+                </div>
+            </div>
+        </section>
+
     </main>
 
     <footer class="footer">

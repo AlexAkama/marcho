@@ -1,5 +1,18 @@
 $(function() {
 
+    $('.price-filter__input').ionRangeSlider({
+        type: "double",
+        prefix: "$",
+        onStart: function(data) {
+            $('.price-filter__from').text(data.from);
+            $('.price-filter__to').text(data.to);
+        },
+        onChange: function(data) {
+            $('.price-filter__from').text(data.from);
+            $('.price-filter__to').text(data.to);
+        }
+    });
+
     $('.top-slider__inner').slick({
         dots: true,
         arrows: false,
