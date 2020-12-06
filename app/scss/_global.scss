@@ -44,6 +44,10 @@ body {
     text-align: center;
 }
 
+.user-nav__link-number {
+    display: none;
+}
+
 .breadcrumbs {
     position: relative;
     padding-left: 25px;
@@ -74,7 +78,10 @@ body {
             top: 9px;
             width: 9px;
             height: 10px;
-            background-image: url(../images/icons/angle-right.svg);
+            background-image: url(../images/icons/double-angle-right.svg);
+            background-position: center center;
+            background-size: cover;
+            background-repeat: no-repeat;
         }
 
         &:last-child {
@@ -96,4 +103,57 @@ body {
 
 .header--404-page {
     background-color: $bg-grey-color;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+    &__arrows {
+        position: relative;
+        text-transform: uppercase;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 8px;
+            width: 5px;
+            height: 10px;
+            background-position: center center;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+    }
+
+    &__prev {
+        padding-left: 15px;
+
+        &::before {
+            left: 0;
+            background-image: url(../images/icons/angle-left.svg);
+        }
+    }
+
+    &__next {
+        padding-right: 15px;
+
+        &::before {
+            right: 0;
+            background-image: url(..//images/icons/angle-right.svg);
+        }
+    }
+
+    &__list {
+        display: flex;
+        padding: 0 35px;
+    }
+
+    &__item {
+        padding: 0 15px;
+    }
+
+    &__link--active {
+        color: $accent-color;
+    }
 }
