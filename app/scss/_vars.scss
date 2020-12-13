@@ -54,7 +54,8 @@ $bg-grey-color: #f6f6f6;
     font-weight: 700;
 }
 
-%checkbox-hide {
+%checkbox-hide,
+%radio-hide {
     position: absolute;
     overflow: hidden;
     width: 1px;

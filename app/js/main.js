@@ -1,5 +1,18 @@
 $(function() {
 
+    // TABS
+
+    $('.single-product-tabs__top-link').on('click', function(e) {
+        e.preventDefault;
+        $('.single-product-tabs__top-link').removeClass('single-product-tabs__top-link--active');
+        $(e.target).addClass('single-product-tabs__top-link--active');
+
+        $('.single-product-tabs__content-item').removeClass('single-product-tabs__content-item--active');
+        $($(e.target).attr('href')).addClass('single-product-tabs__content-item--active');
+    });
+
+    //
+
     $('.shop-content__view-filter-btn').on('click', function() {
         if (!$(this).hasClass('shop-content__view-filter-btn--active')) {
             $('.shop-content__view-filter-btn').toggleClass('shop-content__view-filter-btn--active')
@@ -13,7 +26,13 @@ $(function() {
         $('.product-item').removeClass('product-item--list');
     });
 
-    $('.stylized-select').styler();
+
+    // STYLER 
+
+    $('.stylized-select, .single-product__number').styler();
+
+
+    // ionRangeSlider
 
     $('.price-filter__input').ionRangeSlider({
         type: "double",
@@ -28,6 +47,9 @@ $(function() {
         }
     });
 
+
+    // SLICK
+
     $('.top-slider__inner').slick({
         dots: true,
         arrows: false,
@@ -36,12 +58,35 @@ $(function() {
         autoplaySpeed: 2000
     });
 
+    $('.single-product__thumbnail').slick({
+        asNavFor: '.single-product__big',
+        focusOnSelect: true,
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        vertical: true,
+        draggable: false,
+        arrows: false
+    });
+    $('.single-product__big').slick({
+        asNavFor: '.single-product__thumbnail',
+        draggable: false,
+        arrows: false,
+        fade: true
+
+    });
+
+
+    // RateYO
+
     $(".stars").rateYo({
         starWidth: "17px",
         normalFill: "#ccccce",
         ratedFill: "#ffc35b",
         readOnly: true,
     });
+
+
+    // TIMER
 
     function getTimeRemaining(endtime) {
         const total = Date.parse(endtime) - Date.parse(new Date());
