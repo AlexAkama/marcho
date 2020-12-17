@@ -11,7 +11,12 @@ $bg-grey-color: #f6f6f6;
     text-transform: uppercase;
     color: #fff;
     background-color: $accent-color;
+    transition: all 0.3s;
     cursor: pointer;
+
+    &:hover {
+        transform: scale(1.05);
+    }
 
     @extend %R-400;
 }

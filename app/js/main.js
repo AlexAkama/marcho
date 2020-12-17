@@ -3,7 +3,8 @@ $(function() {
     // TABS
 
     $('.single-product-tabs__top-link').on('click', function(e) {
-        e.preventDefault;
+        e.preventDefault();
+
         $('.single-product-tabs__top-link').removeClass('single-product-tabs__top-link--active');
         $(e.target).addClass('single-product-tabs__top-link--active');
 
